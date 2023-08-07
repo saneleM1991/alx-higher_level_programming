@@ -1,25 +1,25 @@
 #include "lists.h"
 
 /**
- * check_cycle - checks if a list has a cycle in it.
- * @list: Pointer to head node
+ * check_cycle - checks if a lst has a cycle in it.
+ * @lst: Pointer to head node
  * Return: 0 = no cycle, 1 = there is a cycle
  */
-int check_cycle(listint_t *list)
+int check_cycle(listint_t *lst)
 {
-	listint_t *current, *check;
+	listint_t *crnt, *chck;
 
-	if (list == NULL || list->next == NULL)
+	if (lst == NULL || lst->next == NULL)
 		return (0);
-	current = list;
-	check = current->next;
+	crnt = lst;
+	chck = crnt->next;
 
-	while (current != NULL && check->next != NULL && check->next->next != NULL)
+	while (crnt != NULL && chck->next != NULL && chck->next->next != NULL)
 	{
-		if (current == check)
+		if (crnt == chck)
 			return (1);
-		current = current->next;
-		check = check->next->next;
+		crnt = crnt->next;
+		chck = chck->next->next;
 	}
 	return (0);
 }
