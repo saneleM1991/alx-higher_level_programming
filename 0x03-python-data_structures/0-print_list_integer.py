@@ -1,4 +1,3 @@
-"""Module containing function to print all intergerts."""
 #!/usr/bin/python3
 
 
