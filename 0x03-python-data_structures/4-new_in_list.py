@@ -10,7 +10,7 @@ def new_in_list(my_list, idx, element):
         element: element in alist
 
     Return:
-        Copy of original list is idx < 0 or idx is out of range.
+        Copy of original list if idx < 0 or idx is out of range.
 
         Modifide copy of original list.
     """
