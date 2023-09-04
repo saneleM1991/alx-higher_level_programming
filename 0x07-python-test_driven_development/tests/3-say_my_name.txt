@@ -1,0 +1,35 @@
+The ``Say my name module test file`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+This is an test text file in reStructuredText format.  First import
+``say_my_name`` from the ``3-say_my_name`` module:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+		>>> say_my_name("")
+		Traceback (most recent call last):
+		...
+		ValueError: first_name OR last_name cannot be empty.
+		>>> say_my_name("sanele")
+		Traceback (most recent call last):
+		...
+		ValueError: first_name OR last_name cannot be empty.
+		>>> say_my_name(21,"Mshololo")
+		Traceback (most recent call last):
+		...
+		TypeError: first_name must be a string or last_name must be a string
+		>>> say_my_name("sanele",23)
+		Traceback (most recent call last):
+		...
+		TypeError: first_name must be a string or last_name must be a string
+		>>> say_my_name(2,23)
+		Traceback (most recent call last):
+		...
+		TypeError: first_name must be a string or last_name must be a string
+		>>> say_my_name("Sanele","mshololo")
+		My name is Sanele mshololo
+
