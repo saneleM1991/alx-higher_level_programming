@@ -7,7 +7,7 @@ Using ``My list``
 This is a test text file in reStructuredText format.  First import
 ``print sorted`` from the ``1-my-list`` module:
 
-    >>> MyList = __import__('1-my_list').
+    >>> MyList = __import__('1-my_list').MyList
     >>> my_list = MyList()
     >>> my_list.append(1)
     >>> my_list.append(4)
