@@ -11,10 +11,14 @@ class TestBaseClass(unittest.TestCase):
         base = Base()
         self.assertIsInstance(base, Base)
 
-    def test_instance_attribute_id(self):
+    def test_instance_base_has_id_attr(self):
         """Checking if instance member id present."""
         obj = Base()
         self.assertIn("id", dir(obj))
+
+    def test_class_base_has_nbobjects_attr(self):
+        """Checking if class member __nb_objects present."""
+        self.assertIn("_Base__nb_objects", dir(Base))
 
     def test_id_value_one(self):
         """Test id value one. """

@@ -4,10 +4,11 @@
 
 class Base:
     """Base class to mantain id for its subclass."""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialising base class members.
+        """Initialise base class members.
 
         Args:
         id (:obj:`int`, optional): instance member.
