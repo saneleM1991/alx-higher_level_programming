@@ -92,3 +92,14 @@ class Rectangle(Base):
                 `int` Area of rectangle.
         """
         return self.__width * self.__height
+
+    def display(self):
+        """Prints the square with the character `#`."""
+        for i in range(0, self.__height):
+            [print("#", end="") for k in range(0, self.__width)]
+            print("")
+
+    def __str__(self):
+        return (
+            f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -" +
+            f" {self.__width}/{self.__height}")

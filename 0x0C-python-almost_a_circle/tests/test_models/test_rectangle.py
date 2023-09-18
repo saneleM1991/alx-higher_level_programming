@@ -47,3 +47,9 @@ class TestingRectangle(unittest.TestCase):
         """Test area with params and without params."""
         obj = Rectangle(2, 2)
         self.assertEqual(obj.area(), 4)
+
+    def test_str_method_return_value(self):
+        """Test if method return string type."""
+        obj = Rectangle(2, 2)
+        self.assertIsInstance(str(obj), str)
+        self.assertEqual(str(obj), "[Rectangle] (3) 0/0 - 2/2")
