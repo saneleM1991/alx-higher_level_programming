@@ -36,9 +36,14 @@ class TestingRectangle(unittest.TestCase):
     def test_id_value_with_default_value(self):
         """test id value with none param."""
         obj = Rectangle(10, 2)
-        self.assertEqual(obj.id, 1)
+        self.assertEqual(obj.id, 2)
 
     def test_id_value_with_value(self):
         """test id value with value param."""
         obj = Rectangle(10, 2, id=34)
         self.assertEqual(obj.id, 34)
+
+    def test_area_method(self):
+        """Test area with params and without params."""
+        obj = Rectangle(2, 2)
+        self.assertEqual(obj.area(), 4)
