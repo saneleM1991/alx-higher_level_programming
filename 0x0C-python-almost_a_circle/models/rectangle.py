@@ -94,12 +94,19 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Prints the square with the character `#`."""
-        for i in range(0, self.__height):
-            [print("#", end="") for k in range(0, self.__width)]
+        """Display object using # sign."""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
             print("")
 
     def __str__(self):
+        """Displ object as string."""
         return (
             f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -" +
             f" {self.__width}/{self.__height}")
